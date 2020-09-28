@@ -4,7 +4,7 @@
         <mat-form-field appearance="legacy" class="w20p mr1b5p">
             <mat-label>Start Time</mat-label>
             <input matInput [ngxTimepicker]="defaultValue" [value]="serviceObj.startTime">
-            <ngx-material-timepicker #defaultValue (timeSet)="timeSet($event)"></ngx-material-timepicker>
+            <ngx-material-timepicker #defaultValue></ngx-material-timepicker>
         </mat-form-field>
 
         <mat-form-field appearance="legacy" class="w78p">
