@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Service One",
+    "nEu": "1EU",
+    "duration": "1h",
+    "durationValue": 1
+  },
+  {
+    "name": "Service Two",
+    "nEu": "1EU3",
+    "duration": "1h 30min",
+    "durationValue": 1.3
+  },
+  {
+    "name": "Service Three",
+    "nEu": "2EU",
+    "duration": "2h",
+    "durationValue": 2
+  },
+  {
+    "name": "Service Four",
+    "nEu": "4EU",
+    "duration": "4h",
+    "durationValue": 4
+  },
+  {
+    "name": "Service Five",
+    "nEu": "5EU",
+    "duration": "5h",
+    "durationValue": 5
+  }
+]
