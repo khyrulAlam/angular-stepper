@@ -1,0 +1,59 @@
+<section>
+    <div>
+        <mat-form-field>
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+
+
+
+    <div>
+        <div class="select-service" *ngIf="pickServices.length > 0">
+            <app-child-service
+                *ngFor="let service of pickServices; let i = index;"
+                [index]="i"
+                [serviceObj]="service"
+                [serviceList]="serviceList"
+                [staffList]="staffList"
+                (removeService)="removeService($event)"
+            ></app-child-service>
+        </div>
+    
+    
+        <div id="rootInput" class="service-container">
+            <mat-form-field class="w20p mr1b5p">
+                <mat-label>Start Time</mat-label>
+                <input matInput [ngxTimepicker]="defaultValue" [value]="startTime">
+                <ngx-material-timepicker #defaultValue (timeSet)="timeSet($event)"></ngx-material-timepicker>
+            </mat-form-field>
+    
+            <mat-form-field class="w78p">
+                <mat-label>Select</mat-label>
+
+                <mat-select [(ngModel)]="selectedItem" (selectionChange)="selectOption($event)"> 
+                    <mat-option value="">Choose a services </mat-option>
+                    <mat-option *ngFor="let option of serviceList" [value]="option" class="mat-custom-option">
+                        <div class="option-container">
+                            <div class="service-name">
+                                <span> {{option.name}}</span>
+                                <span> {{option.duration}}</span>
+                            </div>
+                            <div class="service-info">
+                                <span> {{ option.nEu }}</span>
+                            </div>
+                        </div>
+                    </mat-option>
+                </mat-select>
+
+            </mat-form-field>
+        
+            <div class="stepper-marker"></div>
+        </div>
+    </div>
+
+
+</section>
+

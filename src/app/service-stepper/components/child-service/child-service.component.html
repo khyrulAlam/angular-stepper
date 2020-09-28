@@ -1,0 +1,45 @@
+<div class="service-container">
+    <div class="removeItem" (click)="removeItem()">x</div>
+    <div class="example-container">
+        <mat-form-field appearance="legacy" class="w20p mr1b5p">
+            <mat-label>Start Time</mat-label>
+            <input matInput [ngxTimepicker]="defaultValue" [value]="serviceObj.startTime">
+            <ngx-material-timepicker #defaultValue (timeSet)="timeSet($event)"></ngx-material-timepicker>
+        </mat-form-field>
+
+        <mat-form-field appearance="legacy" class="w78p">
+            <mat-label>Select</mat-label>
+            <mat-select [value]="serviceObj.serviceName">
+                <mat-option value="">Choose a services </mat-option>
+                <mat-option *ngFor="let option of serviceList" [value]="option.name" class="mat-custom-option">
+                    <div class="option-container">
+                        <div class="service-name">
+                            <span> {{option.name}}</span>
+                            <span> {{option.duration}}</span>
+                        </div>
+                        <div class="service-info">
+                            <span> {{ option.nEu }}</span>
+                        </div>
+                    </div>
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="legacy" class="w20p mr1b5p">
+            <mat-label>Input</mat-label>
+            <input matInput [value]="serviceObj.duration" readonly>
+        </mat-form-field>
+        <mat-form-field appearance="legacy" class="w78p">
+            <mat-label>Select</mat-label>
+            <mat-select [value]="serviceObj.staffName">
+                <mat-option *ngFor="let staff of staffList" [value]="staff">
+                    {{ staff }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    
+    <div class="stepper-marker">{{ index + 1 }}</div>
+    <div class="steeper-marker-line"></div>
+</div>

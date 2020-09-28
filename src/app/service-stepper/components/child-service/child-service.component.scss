@@ -1,0 +1,65 @@
+.service-container {
+  border: 1px solid #d8d8d8;
+  padding: 25px;
+  margin-bottom: 25px;
+  position: relative;
+}
+.w20p {
+  width: 20%;
+}
+.mr1b5p {
+  margin-right: 1.5%;
+}
+.w78p {
+  width: 78%;
+}
+::ng-deep {
+  .mat-custom-option {
+    height: auto !important;
+    line-height: normal !important;
+    .option-container {
+      border-bottom: 1px solid #e4e4e4;
+      padding: 10px 0;
+      .service-name {
+        margin-bottom: 6px;
+        display: flex;
+        justify-content: space-between;
+        font-weight: 600;
+      }
+      .service-info {
+        font-size: 14px;
+        color: #9c9c9c;
+      }
+    }
+  }
+}
+.stepper-marker {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #3f51b5;
+  left: -35px;
+  top: calc(30% - 10px);
+  text-align: center;
+  line-height: 22px;
+  color: #3f51b5;
+  font-weight: 600;
+}
+.steeper-marker-line {
+  position: absolute;
+  border-left: 1px dotted #3f51b5;
+  width: 0;
+  height: 100%;
+  left: -24px;
+  top: calc(30% + 16px);
+}
+.removeItem {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  color: white;
+  cursor: pointer;
+  background: #ff5144;
+  padding: 0px 5px;
+}

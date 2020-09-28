@@ -1,0 +1,59 @@
+.service-container {
+  border: 1px solid #d8d8d8;
+  padding: 25px;
+  position: relative;
+  margin-bottom: 25px;
+}
+.w20p {
+  width: 20%;
+}
+.mr1b5p {
+  margin-right: 1.5%;
+}
+.w78p {
+  width: 78%;
+}
+
+::ng-deep {
+  .mat-custom-option {
+    height: auto !important;
+    line-height: normal !important;
+    .option-container {
+      border-bottom: 1px solid #e4e4e4;
+      padding: 10px 0;
+      .service-name {
+        margin-bottom: 6px;
+        display: flex;
+        justify-content: space-between;
+        font-weight: 600;
+      }
+      .service-info {
+        font-size: 14px;
+        color: #9c9c9c;
+      }
+    }
+  }
+}
+.stepper-marker {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #d8d8d8;
+  left: -35px;
+  top: calc(50% - 10px);
+}
+.animate-left {
+  position: relative;
+  animation: animateLeft 0.4s;
+}
+@keyframes animateLeft {
+  from {
+    left: -200px;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
